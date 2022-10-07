@@ -21,6 +21,13 @@ return [
         'scheme' => 'https',
     ],
 
+    'gatekeeper' => [
+        'routes' => [
+            'generate-token' => env('GATEKEEPER_DOMAIN') . '/generate-token',
+            'get-user' => env('GATEKEEPER_DOMAIN') . '/user'
+        ]
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
