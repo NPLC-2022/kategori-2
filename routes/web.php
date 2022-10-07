@@ -21,4 +21,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::view('take-off-timer', 'take-off-timer')
+    ->middleware('auth')
+    ->name('take-off-timer');
+
+require __DIR__ . '/auth.php';

@@ -74,9 +74,7 @@ class LoginRequest extends FormRequest
         $user = User::whereEmail($http->json('data.user.email'))->first();
 
         if (!$user) {
-
             $userHttpData = $http->collect('data.user');
-
             $user = User::create([
                 'name' => $userHttpData->get('name'),
                 'email' => $userHttpData->get('email'),
