@@ -11,6 +11,8 @@ class QuizSession extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function quiz(): BelongsTo
     {
         return $this->belongsTo(Quiz::class);
