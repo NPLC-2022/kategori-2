@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('session_answers', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\QuizSession::class)
+            $table->foreignUlid('quiz_session_id')
                 ->references('id')
                 ->on('quiz_sessions')
                 ->cascadeOnDelete();
